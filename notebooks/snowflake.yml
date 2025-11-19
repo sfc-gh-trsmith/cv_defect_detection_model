@@ -1,0 +1,17 @@
+# Snowflake Notebook Project Definition
+# Documentation: https://docs.snowflake.com/en/developer-guide/snowflake-cli/command-reference/notebook-commands/deploy
+
+definition_version: 2
+
+entities:
+  pcb_cv_training_notebook:
+    type: notebook
+    identifier:
+      name: PCB_CV_TRAINING_NOTEBOOK
+      schema: PUBLIC
+      database: PCB_CV
+    notebook_file: 1_Distributed_Model_Training_Snowflake_Notebooks.ipynb
+    query_warehouse: PCB_CV_WH
+    artifacts:
+      - 1_Distributed_Model_Training_Snowflake_Notebooks.ipynb
+      - environment.yaml
